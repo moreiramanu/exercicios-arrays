@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Lista de Números Pares</h1>
+    <ul id="pares"></ul>
+    <script>
+        let numeros  =[2,40,855,33,4852,7,10];
+        let numerosPares = numeros.filter(function(numero){
+        return numero % 2 === 0;
+        } );
+        let pares = document.getElementById('pares');
+        for (let i =0; i<numerosPares.length; i++){
+            let itemLista = document.createElement ("li");
+            itemLista.textContent = numerosPares[i];
+            pares.appendChild(itemLista);
+          
+        }
+    </script>
+</body>
+</html>

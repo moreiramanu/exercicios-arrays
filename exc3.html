@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array já existente</h1>
+<ul id="original"></ul>
+<h1>Novo Array</h1>
+<ul id="novo"></ul>
+<script>
+    const original =[25,30,88,340,18];
+    const multiplicado = original.map(function(number){
+        return number * 2;
+    });
+    const originalElement = document.getElementById('original');
+    const novoElement = document.getElementById('novo');
+
+    function displayArrayInList(arr, listElement){
+        arr.forEach(function (item) {
+        const listItem = document.createElement("li");
+        listItem.textContent = item;
+        listElement.appendChild(listItem);     
+        });
+    }
+    displayArrayInList(original, originalElement)
+    displayArrayInList(multiplicado, novoElement);
+</script>
+</body>
+</html>

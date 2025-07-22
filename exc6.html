@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Média</h1>
+    <p id="resultado"></p>
+    <script>
+let numeros = [13, 18, 21, 42, 59];
+let soma = numeros.reduce(function(acumulador, numero) {
+    return acumulador + numero;
+    }, 0);
+let media = soma / numeros.length;
+let paragrafoResultado = document.getElementById("resultado");
+paragrafoResultado.textContent = "A média dos números somados é: " + media.toFixed(2);
+    </script>
+</body>
+</html>

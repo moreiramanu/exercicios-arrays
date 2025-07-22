@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Arrays</h1>
+  <p>Array original: <span id="original"></span></p>
+  <p>Array modificado: <span id="modificado"></span></p>
+
+  <script>
+let meuArray = [15, 20, 34, 12, 33, 77];
+document.getElementById("original").textContent = "[" + meuArray.join(", ") + "]";
+meuArray.splice(1, 1);
+document.getElementById("modificado").textContent = "[" + meuArray.join(", ") + "]";
+  </script>
+</body>
+</html>
+</body>
+</html>
